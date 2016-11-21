@@ -62,9 +62,6 @@ for i in range(0, 20):
             continue
         team_name = columns[0].get_text()
         adjusted_defensive_rating = columns[12].get_text()
-        if team_name == u'New Orleans/Oklahoma City Hornets':
-            print team_map[team_name]
-            input()
         team_defensive_ratings_adjusted[team_map[team_name]] = float(adjusted_defensive_rating)
         print "{}-{} {}: {}".format(year-1, year, team_name, adjusted_defensive_rating)
     defensive_stats.append(team_defensive_ratings_adjusted)
